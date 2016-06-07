@@ -1,0 +1,6 @@
+{
+  "name": "Tmpblog.GitHub.so",
+  "tagline": "jekyll is not ok; but i need to write sth about my job",
+  "body": "### Welcome colinhe blog.\r\n由于jekyll 环境还没整好，而我又迫不及待的需求，记录平时工作学习遇到的问题，暂且用此方式记录了\r\n\r\n### unix socket编程\r\nepoll 高效并发编程；\r\n\r\n### linux python 日志分析\r\ncrontab 定时启动脚本；\r\nscp 临时文件回传；\r\nexpect 脚本\r\n\r\n### c语言总结\r\n\r\n\r\n### java so\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
