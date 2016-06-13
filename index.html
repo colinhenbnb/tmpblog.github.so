@@ -52,6 +52,41 @@
 <p>由于jekyll 环境还没整好，而我又迫不及待的需求，记录平时工作学习遇到的问题，暂且用此方式记录了</p>
 
 <h3>
+<a id="mac-iterm-环境配置" class="anchor" href="#mac-iterm-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>mac iterm 环境配置</h3>
+
+<p>windows下一直使用xshell,特别喜欢xshell支持的快捷键输入密码，当然mac下有破解版的secureCRT，但是蛋疼的界面看起来太杂乱了，还是iterm使用起来精简清晰；习惯了使用xshell，当然需要把iterm配置成xshell工作模式啦</p>
+
+<h4>
+<a id="1官网下载iterm2并安装" class="anchor" href="#1%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BDiterm2%E5%B9%B6%E5%AE%89%E8%A3%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1、官网下载iterm2,并安装；</h4>
+
+<h4>
+<a id="2配置快捷键" class="anchor" href="#2%E9%85%8D%E7%BD%AE%E5%BF%AB%E6%8D%B7%E9%94%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2、配置快捷键</h4>
+
+<p>将快捷键配置为存储的机器名或者对应机器名的几个常用密码，（机器名：shift+F1..n,密码F1..n）使用起来特别方便；</p>
+
+<pre><code>command+O打开profile编辑界面；   
+创建新的profile或者修改default profile；
+选择key选项；里面配置对应的快捷键（切记action 选择send text,\n 标示换行）对应的操作即可
+</code></pre>
+
+<p>好啦，关闭之后在iterm键入快捷键，即可输入对应的text;</p>
+
+<h4>
+<a id="3session-clone" class="anchor" href="#3session-clone" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3、session clone</h4>
+
+<p>iterm其实并不支持session clone;command+t只能是复制窗口，在办公时候登入relay需要重复输入token密码（一个密码只能输入一次，一般人我不告诉他），也是醉醉的；</p>
+
+<p>但是，可以用另外的方法替换session clone 的模式；参考：<a href="http://www.cnblogs.com/rollenholt/p/4531199.html">http://www.cnblogs.com/rollenholt/p/4531199.html</a></p>
+
+<pre><code> 在~/.ssh里面创建一个config文件
+ 输入： host *
+       ControlMaster auto
+       ControlPath ~/.ssh/master-%r@%h:%p
+</code></pre>
+
+<p>这样command + t 即可复制session了</p>
+
+<h3>
 <a id="unix-socket编程" class="anchor" href="#unix-socket%E7%BC%96%E7%A8%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>unix socket编程</h3>
 
 <p>epoll 高效并发编程；</p>
